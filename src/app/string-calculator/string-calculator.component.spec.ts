@@ -38,7 +38,15 @@ describe('StringCalculatorComponent', () => {
 
   //Testcase 4: Allow the add method to handle any amount of numbers.
   it("should allow any amount of numbers.", () =>{
-    expect(component.add("5,6,8,9,45,09,56,99,34,06,44")).toBe(321)
+    expect(component.add("5,6,8,9,45,09,56,99,34,06,44")).toBe(321);
+  })
+
+  //Testcase 5:Allow the add method to handle new lines between numbers (instead of commas). ("1\n2,3" should return 6)
+  it("should allow new line bettween numbers",() =>{
+    expect(component.add("1\n2,3")).toBe(6);
+    expect(component.add("1\n2\n3")).toBe(6);
+    expect(component.add("10\n20,30")).toBe(60);
+    expect(component.add("1,2\n3,4\n5")).toBe(15);
   })
 
 });

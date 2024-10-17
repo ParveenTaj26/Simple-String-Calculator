@@ -13,10 +13,15 @@ public add(number: string){
     if(!number){
       return 0;
     }
-    let numberList = number.split(',').map(Number);
+
+    // Splitting the string by commas and convert each part to a number
+    let numberList = number.split(/[\n,]/).map(Number);
+
+    // Using reduce to sum up the numbers
     const result : number = numberList.reduce((sum, current) => 
      sum + current
     ,0)
+    console.log(result);
     return result;
   }
 }
