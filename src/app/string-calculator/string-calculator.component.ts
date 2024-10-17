@@ -13,6 +13,7 @@ public add(number: string){
     if(!number){
       return 0;
     }
-    return 0;
+    let numberList = number.split(',').map(Number)
+    return numberList[0];
   }
 }
