@@ -35,4 +35,10 @@ describe('StringCalculatorComponent', () => {
   it("should return sum if its two number",()=>{
     expect(component.add("2,6")).toBe(8);
   })
+
+  //Testcase 4: Allow the add method to handle any amount of numbers.
+  it("should allow any amount of numbers.", () =>{
+    expect(component.add("5,6,8,9,45,09,56,99,34,06,44")).toBe(321)
+  })
+
 });
