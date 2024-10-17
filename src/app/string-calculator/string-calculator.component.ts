@@ -13,7 +13,10 @@ public add(number: string){
     if(!number){
       return 0;
     }
-    let numberList = number.split(',').map(Number)
-    return numberList[0];
+    let numberList = number.split(',').map(Number);
+    const result : number = numberList.reduce((sum, current) => 
+     sum + current
+    ,0)
+    return result;
   }
 }

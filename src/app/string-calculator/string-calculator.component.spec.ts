@@ -30,4 +30,9 @@ describe('StringCalculatorComponent', () => {
   it("should return the same number if only one number provided",()=>{
   expect(component.add("2")).toBe(2);
   })
+
+  //Testcase 3: if two numbers give its sum
+  it("should return sum if its two number",()=>{
+    expect(component.add("2,6")).toBe(8);
+  })
 });
