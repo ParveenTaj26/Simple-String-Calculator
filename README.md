@@ -29,3 +29,25 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## UI 
 ![UI_Calculator](https://github.com/user-attachments/assets/bf5ef44c-6740-40dc-bc5d-a391a482098b)
 
+## Testcase 1 : Input: “1”, Output: 1 
+![TC1](https://github.com/user-attachments/assets/a8b2eefc-2a93-49cc-a655-f877196a6957)
+
+## Testcase 2 : Input: “1,5”, Output: 6
+![TC2](https://github.com/user-attachments/assets/ac43a65d-9db2-4d18-9623-d9e81e771c7e)
+
+## Testcase 3 : Allow the add method to handle any amount of numbers.
+![TC3](https://github.com/user-attachments/assets/ce276a8b-9b34-48d5-8fab-40fcccb39689)
+
+## Testcase 4 : handle new lines between numbers (instead of commas). ("1\n2,3" should return 6)
+![TC4](https://github.com/user-attachments/assets/9d7a59d0-8bac-4164-a83a-a775dae251e8)
+
+## Testcase 5 : Support different delimiters:
+![TC5](https://github.com/user-attachments/assets/86a1a68e-d5d2-4c72-b54d-f4bbeb61b102)
+
+## Testcase 6 : with a negative number will throw an exception
+![TC6](https://github.com/user-attachments/assets/6eff6601-9c3f-4683-a00f-8de95c616045)
+
+
+
+
+
