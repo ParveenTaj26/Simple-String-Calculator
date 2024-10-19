@@ -1,7 +1,9 @@
-<form #ngForm>
-<input type="text" name="value" id="numValue" ngModel>
-<button (click)="add(ngForm['numValue'].value)">Add</button>
-<div>
-
-</div>
-</form>
+<div class="content-wrapper">
+    <h2>Simple String Calculator</h2>
+    <textarea [(ngModel)]="input" rows="4" cols="50" placeholder="Enter numbers..." class="content"></textarea>
+    <br />
+    <button type="button" class="btn btn-outline-primary" (click)="result = add(input)">Add</button>
+    <h3 class="h3" *ngIf="result || result == 0">Result: {{ result }}</h3>
+    <h3 *ngIf="error">{{error}}</h3>
+  </div>
+  

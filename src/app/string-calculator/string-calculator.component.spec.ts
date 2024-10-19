@@ -49,4 +49,18 @@ describe('StringCalculatorComponent', () => {
     expect(component.add("1,2\n3,4\n5")).toBe(15);
   })
 
+  //Testcase 6:Support different delimiters
+  it("should Support different delimiters",()=>{
+    expect(component.add("//;\n1;2")).toBe(3);
+  })
+
+  //Testcase 7: Calling add with a negative number will throw an exception: "negative numbers not allowed <negative_number>".
+  it('should throw an exception for negative numbers', () => {
+    expect(() => component.add('1,-2')).toThrow(new Error('Negative numbers not allowed: -2'));
+  });
+
+  //Testcase 8: If there are multiple negative numbers, show all of them in the exception message, separated by commas.
+  it('should throw an exception with all negative numbers listed', () => {
+    expect(() => component.add('1,-2,3,-4')).toThrow(new Error('Negative numbers not allowed: -2, -4'));
+  });
 });

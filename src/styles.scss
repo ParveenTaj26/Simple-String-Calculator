@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: var(--bs-primary-bg-subtle) !important;
+}
+
+h2{
+    padding: 20px;
+    color: var(--bs-blue) !important;
+}
+
+button {
+    margin: 20px !important;
+}
