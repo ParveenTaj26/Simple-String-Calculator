@@ -43,15 +43,15 @@ describe('StringCalculatorComponent', () => {
 
   //Testcase 5:Allow the add method to handle new lines between numbers (instead of commas). ("1\n2,3" should return 6)
   it("should allow new line bettween numbers",() =>{
-    expect(component.add("1\n2,3")).toBe(6);
-    expect(component.add("1\n2\n3")).toBe(6);
-    expect(component.add("10\n20,30")).toBe(60);
-    expect(component.add("1,2\n3,4\n5")).toBe(15);
+    expect(component.add("1\\n2,3")).toBe(6);
+    expect(component.add("1\\n2\\n3")).toBe(6);
+    expect(component.add("10\\n20,30")).toBe(60);
+    expect(component.add("1,2\\n3,4\\n5")).toBe(15);
   })
 
   //Testcase 6:Support different delimiters
   it("should Support different delimiters",()=>{
-    expect(component.add("//;\n1;2")).toBe(3);
+    expect(component.add("//;\\n1;2")).toBe(3);
   })
 
   //Testcase 7: Calling add with a negative number will throw an exception: "negative numbers not allowed <negative_number>".
